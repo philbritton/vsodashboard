@@ -1,0 +1,21 @@
+﻿@model System.Collections.Generic.List<VSOClientData.Entities.Vso.VsoAccount>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@ViewBag.Message
+
+
+@foreach (var m in Model)
+{
+
+    <div>
+        <span>@Html.ActionLink("View", "WorkItems", new { account = m.AccountName } )</span>
+        <span>@m.AccountId</span>
+        <span>@m.CreatedDate</span>
+        <span>@m.AccountUrl</span>
+</div>
+
+}
